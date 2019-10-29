@@ -13,7 +13,7 @@ end
 
 class MakeAThead < SlackRubyBot::Bot
   match // do |client, data, match|
-    unless data.user == 'UPK8A322E'
+    unless data.user == ENV['COOL_USER']
       client.web_client.reactions_add(
         channel: data.channel,
         name: 'make-a-thread',
